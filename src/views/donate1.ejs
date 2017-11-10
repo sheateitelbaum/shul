@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/css/shul.css">
+    <title>
+        <%=title%>
+    </title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <%for( var i=0;i<nav.length;i++){%>
+                <li>
+                    <a href="<%=nav[i].Link%>">
+                        <%=nav[i].Text%>
+                    </a>
+                </li>
+                <%}%>
+        </ul>
+    </nav>
+    <h1>
+
+    </h1>
+    <%if(user){%>
+        <form name="donationForm" action="/postDonation/<%=user._id%>" method="post">
+            <%}
+        else{%>
+                <form name="donationForm" action="/postDonation" method="post">
+                    <%}%>
+                        <%if(user){%>
+                            <label name="name">Name</label> <input id="name" name="name" value="<%=user.username %>">
+                            <%}else{%><label name="name">Name</label>
+                                <input id="name" name="name">
+                                <%}%>
+
+                                    <label name="amount">Amount</label> <input id="amount" name="amount" type="number"> <label name="type">Type</label> <input id="type" name="type" placeholder="Mi Shebairach etc.">
+                                    <input type="submit" value="Donate">
+                </form>
+
+</body>
+
+</html>

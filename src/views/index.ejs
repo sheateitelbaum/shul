@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/shul.css">
+    <title>
+        <%=title%>
+    </title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <%for( var i=0;i<nav.length;i++){%>
+                <li>
+                    <a href="<%=nav[i].Link%>">
+                        <%=nav[i].Text%>
+                    </a>
+                </li>
+                <%}%>
+        </ul>
+    </nav>
+    <h1>בית מדרש לתורה ותפילה
+        <span class="address"><br>1529 Newport Drive<br>Lakewood,NJ 08701</span>
+    </h1>
+
+    <h2>Our building campaign is in full swing ! <br> Contribute Today !</h2>
+    <h1>
+        <div class="funds">
+
+            $
+            <%=funds.funds%> Raised !<br> Thank you !
+        </div>
+    </h1>
+    <%if(user){%>
+        <p>
+            <%=user.username%>
+        </p>
+        <%}%>
+
+
+
+</body>
+
+</html>

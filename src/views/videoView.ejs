@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/shul.css">
+    <title>
+        <%=title%>
+    </title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <%for( var i=0;i<nav.length;i++){%>
+                <li>
+                    <a href="<%=nav[i].Link%>">
+                        <%=nav[i].Text%>
+                    </a>
+                </li>
+                <%}%>
+        </ul>
+    </nav>
+
+
+
+    <div id="videoDiv">
+        <h2 id="caption">Shul Videos</h2>
+        <video id="video" controls></video>
+
+    </div>
+
+    <footer id="picDiv">
+        <%for( var i=0;i<videos.length;i++){%>
+            <figure class="videoFigure" id="<%=videos[i].url%>"><img src="<%=videos[i].image%>"></img>
+                <figcaption class="figcaption" ">
+                    <%=videos[i].title%>
+                </figcaption>
+            </figure>
+<%}%>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    <script src="../scripts/videos.js "></script>
+</body>
+
+</html>

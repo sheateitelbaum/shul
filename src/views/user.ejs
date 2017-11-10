@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/css/shul.css">
+    <title>
+        <%=title%>
+    </title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <%for( var i=0;i<nav.length;i++){%>
+                <li>
+                    <a href="<%=nav[i].Link%>">
+                        <%=nav[i].Text%>
+                    </a>
+                </li>
+                <%}%>
+        </ul>
+    </nav>
+    <h1>
+        <%=user.username%>
+    </h1>
+    <%if(user.donations){%>
+        <table>
+            <caption>Donations</caption>
+            <tr>
+                <th>For</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+
+            <%for( var i=0;i<user.donations.length;i++){%>
+
+                <tr>
+                    <td>
+                        <%=user.donations[i].type%>
+                    </td>
+                    <td>
+
+                        $
+                        <%=user.donations[i].amount%>
+                    </td>
+                    <td>
+                        <%=user.donations[i].date%>
+                    </td>
+                </tr>
+                <%}%>
+                    <%}%>
+
+
+
+
+        </table>
+
+</body>
+
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/shul.css">
+    <title>
+        <%=title%>
+    </title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <%for( var i=0;i<nav.length;i++){%>
+                <li>
+                    <a href="<%=nav[i].Link%>">
+                        <%=nav[i].Text%>
+                    </a>
+                </li>
+                <%}%>
+        </ul>
+    </nav>
+    <h1>Sign Up </h1>
+    <form name="signUpForm" action="/auth/signUp" method="post">
+        <label name="userName">User Name</label> <input id="userName" name="userName" required><br> <label name="password">Password</label> <input id="password" name="password" required><br>
+        <input type="submit" value="Sign up">
+    </form>
+
+</html>

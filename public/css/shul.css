@@ -1,0 +1,162 @@
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    /*position: relative;*/
+}
+
+ul {
+    background-color: pink;
+    margin-top: 0px;
+    padding: 1em 2em;
+}
+
+nav {
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: blueviolet;
+}
+
+.address {
+    font-size: .9em;
+}
+
+h1 {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.funds {
+    padding-top: 145px;
+    margin-top: 40px;
+    width: 300px;
+    height: 150px;
+    color: #009688;
+    text-align: center;
+}
+
+#videoDiv {
+    text-align: center;
+}
+
+#video {
+    width: 600px;
+    height: 390px;
+    /*display: none;*/
+    background-color: pink;
+    border: 1px solid black;
+}
+
+video {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#picDiv {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: pink;
+    box-sizing: border-box;
+    padding-top: 12px;
+    text-align: center;
+}
+
+img {
+    height: 50px;
+    width: 65px;
+    margin: 0px;
+    padding: 0px;
+}
+
+img:hover {
+    height: 51px;
+    width: 66px;
+    cursor: pointer;
+}
+
+figure {
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 16px;
+}
+
+#caption {
+    text-align: center;
+}
+
+table,
+caption {
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+caption {
+    font-weight: bold;
+    padding: 4px;
+}
+
+td,
+th {
+    border: 1px solid black;
+    padding: 4px;
+}
+
+form {
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: pink;
+}
+
+label,
+select {
+    display: inline-block;
+    width: 73px;
+}
+
+input,
+label,
+select {
+    margin-top: 6px;
+    position: relative;
+    top: 30%;
+}
+
+select {
+    height: 21px;
+    width: 174px;
+}
+
+input[type=submit] {
+    background-color: lightgrey;
+    left: 44%;
+}
